@@ -56,3 +56,43 @@ Using the cache-control headers we can do caching. Never keep expiry date too hi
 
 G. All documentation and code should be provided within the README.md file in github
 
+
+Tomcat Server Setup :
+Step 1) Installation Tomcat and make sure that below environment variables have been set up in order to run Tomcat locally.
+
+* CATALINA_HOME=   (address where your Apache Tomcat is)
+C:\Program Files\Java\apache-tomcat-7.0.59\apache-tomcat-7.0.59 
+* JAVA_HOME= (address where your JDK is)
+C:\Program Files\Java\jdk1.8.0_25; 
+* JRE_HOME= ; (address where your JRE is)
+        C:\Program Files\Java\jre1.8.0_25 
+* CLASSPATH=%JAVA_HOME%\bin;%JRE_HOME%;%CATALINA_HOME%\lib
+
+Step 2) Testing Tomcat as it was installed and set up properly
+
+
+
+
+2) Building WAR file manually:
+
+Location of the WAR file crated as :  <GIT Project Worksapce Directory>\build\libs
+3) Deploy the WAR file into TOMCAT server manually  , start the Tomcat server after copy the WAR file 
+Location path : <<TOMCAT server install locatkion>>/webapps folder
+4) Testing
+Test the application GET service from IE Browser
+
+Down load the SOAP UI project from GIT and Import into SOAP UI Project
+<<GIT Source Code Location>>/ SpringDemoGradleProject /RESTTestProject-soapui-project.xml
+
+2) Steps for AWS cloud Solution :
+2.1) AWS Service  - Elastic Beanstalk
+2.3) Create a new application 
+2.3) Create an environment
+	a) Webserver Environment , Tomcat Platform and upload WAR file 
+2.4) Copy the URL service into application.properties , service.url
+       a)  Save the project and create new WAR file with updated URL and deploy again into AWS
+2.5)  Test using above URL( Update with new URL ) and test the same from SOAP UI as well.
+       
+ 
+
+
